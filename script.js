@@ -17,8 +17,8 @@ class Particle{
         this.size = Math.random()*5 + 3;
         this.x = Math.random()*(canvas.width - 50) + (this.size + 10);
         this.y = Math.random()*(canvas.height - 50) + (this.size + 10);
-        this.directionX = Math.random()*5 -2.5;
-        this.directionY = Math.random()*5 -2.5;
+        this.directionX = Math.random()*7 -3.5;
+        this.directionY = Math.random()*7 -3.5;
         this.color = `#00ffff`;
     }
 
