@@ -87,7 +87,7 @@ const animate = () => {
             lineOpacity = 1 - distance/100;
             if(distance < 100){
                 ctx.beginPath();
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 5;
                 ctx.strokeStyle = `rgba(0,255,255,${lineOpacity})`;
                 ctx.moveTo(ParticlesArray[j].x, ParticlesArray[j].y);
                 ctx.lineTo(ParticlesArray[i].x, ParticlesArray[i].y);
