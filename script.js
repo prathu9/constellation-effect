@@ -68,7 +68,7 @@ class Particle{
 
 const init = () => {
     ParticlesArray = [];
-    let noOfParticle = (canvas.width * canvas.height)/3000;
+    let noOfParticle = (canvas.width * canvas.height)/5000;
     for(let i=0; i < noOfParticle; i++){
         ParticlesArray.push(new Particle());
     }
@@ -84,10 +84,10 @@ const animate = () => {
             let dx = ParticlesArray[j].x - ParticlesArray[i].x;
             let dy = ParticlesArray[j].y - ParticlesArray[i].y;
             let distance = Math.sqrt(dx*dx + dy*dy);
-            lineOpacity = 1 - distance/100;
-            if(distance < 100){
+            lineOpacity = 1 - distance/150;
+            if(distance < 150){
                 ctx.beginPath();
-                ctx.lineWidth = 5;
+                ctx.lineWidth = 1;
                 ctx.strokeStyle = `rgba(0,255,255,${lineOpacity})`;
                 ctx.moveTo(ParticlesArray[j].x, ParticlesArray[j].y);
                 ctx.lineTo(ParticlesArray[i].x, ParticlesArray[i].y);
